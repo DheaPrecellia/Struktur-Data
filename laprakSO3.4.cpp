@@ -1,5 +1,4 @@
 //Priority
-
 #include <iostream>
 #include <iomanip>
 using namespace std;
@@ -46,5 +45,20 @@ int main() {
     // Output hasil
     cout << "\n===============================================================\n";
     cout << " PROSES  | PRIORITAS | BURST TIME | WAITING TIME | TURNAROUND TIME\n";
+    cout << "---------------------------------------------------------------\n";
+    for (i = 0; i < n; i++) {
+        cout << "   P" << setw(5) << left << p[i]
+             << " | " << setw(9) << pri[i]
+             << " | " << setw(10) << bt[i]
+             << " | " << setw(12) << wt[i]
+             << " | " << setw(15) << tat[i] << endl;
+    }
+    cout << "---------------------------------------------------------------\n";
+    cout << fixed << setprecision(2);
+    cout << "Rata-rata Waiting Time    = " << wtavg / n << endl;
+    cout << "Rata-rata Turnaround Time = " << tatavg / n << endl;
+    cout << "===============================================================\n";
 
+    return 0;
+}
 
